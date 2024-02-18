@@ -16,6 +16,10 @@
         .form-control {
             width: 40%;
         }
+        .input-group{
+            width: 40%;
+        }
+        
     </style>
 </head>
 <body>
@@ -40,7 +44,15 @@
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" required>
+                <div class="input-group">
+                    <div class="input-group-prepend ">
+                        <select class="custom-select" id="countryCode">
+                            <option value="91">+91 (India)</option>
+                            <option value="1">+1 (USA)</option>
+                        </select>
+                    </div>
+                    <input type="telephone" class="form-control" id="phone" pattern="[0-9]{10}" required>
+                </div>
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
